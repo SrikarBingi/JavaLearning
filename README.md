@@ -1,0 +1,6 @@
+-OOPS
+-Encapsulation
+-Inheritance
+-Polymorphism
+-Interface
+-Abstraction
