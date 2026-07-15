@@ -3,6 +3,8 @@ package com.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.entity.Department;
+import com.entity.Employee;
 import com.entity.Passport;
 import com.entity.Person;
 
@@ -17,6 +19,8 @@ public class HibernateUtil {
 			cfg.configure();
 			cfg.addAnnotatedClass(Person.class);
 			cfg.addAnnotatedClass(Passport.class);
+			cfg.addAnnotatedClass(Employee.class);
+			cfg.addAnnotatedClass(Department.class);
 			
 			sessionFactory = cfg.buildSessionFactory();
 			return sessionFactory;
