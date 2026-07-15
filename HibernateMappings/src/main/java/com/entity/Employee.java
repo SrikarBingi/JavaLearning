@@ -26,6 +26,15 @@ public class Employee {
 		super();
 	}
 
+	public Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+
+
 	public Employee(int id, String name, double salary, Department department) {
 		super();
 		this.id = id;

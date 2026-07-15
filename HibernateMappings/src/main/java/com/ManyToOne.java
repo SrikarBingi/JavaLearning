@@ -29,12 +29,12 @@ public class ManyToOne {
 	}
 
 	private static void save(Session session) {
-		Department department = new Department(1, "IT");
+//		Department department = new Department(1, "IT");
 
-		Employee emp1 = new Employee(101, "Srikar", 50000, department);
-		Employee emp2 = new Employee(102, "Rahul", 45000, department);
-
-		session.persist(emp1);
-		session.persist(emp2);
+//		Employee emp1 = new Employee(101, "Srikar", 50000, department);
+//		Employee emp2 = new Employee(102, "Rahul", 45000, department);
+//
+//		session.persist(emp1);
+//		session.persist(emp2);
 	}
 }
