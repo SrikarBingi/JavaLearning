@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.model.User" autowire="byName">
+    	<property name="userId" value="101"/>
+    	<property name="name" value="Srikar"/>
+    </bean>
+    
+    <bean id="user2" class="com.model.User">
+	    <property name="userId" value="102"/>
+	    <constructor-arg name="name" value="Keerthana"/>
+	    <property name="addr" ref="addr1"/>
+    </bean>
+    
+    <bean id="addr" class="com.model.Address">
+    	<property name="addrID" value="502108"/>
+    	<property name="street" value="dubbak"/>
+    </bean>
+	
+	<bean id="addr1" class="com.model.Address">
+    	<property name="addrID" value="502106"/>
+    	<property name="street" value="ylr"/>
+    </bean>
+</beans>
