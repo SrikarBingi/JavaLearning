@@ -17,7 +17,7 @@
 	    <property name="addr" ref="addr1"/>
     </bean>
     
-    <bean id="addr" class="com.model.Address">
+    <bean id="addr2" class="com.model.Address">
     	<property name="addrID" value="502108"/>
     	<property name="street" value="dubbak"/>
     </bean>
