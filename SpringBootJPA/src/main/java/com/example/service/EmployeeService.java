@@ -16,4 +16,10 @@ public class EmployeeService {
 		Employee emp = new Employee("Srikar",10000);
 		return employeeRepository.save(emp);
 	}
+	
+	public Employee getEmployeeById( int id) {
+		return employeeRepository.getEmployeeById(id);
+	}
+	
+	
 }
