@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.flm.dto.OrderRequest;
 import com.flm.dto.OrderResponse;
+import com.flm.exception.OrderNotFoundException;
 import com.flm.model.Order;
 import com.flm.model.OrderStatus;
 import com.flm.dao.OrderRepository;
@@ -53,7 +54,7 @@ public class OrderServiceImpl implements OrderService {
 
         Order order = repository.findById(id)
                 .orElseThrow(() ->
-                        new RuntimeException(
+                        new OrderNotFoundException(
                                 "Order not found with id: " + id
                         )
                 );
@@ -68,7 +69,7 @@ public class OrderServiceImpl implements OrderService {
 
         Order existingOrder = repository.findById(id)
                 .orElseThrow(() ->
-                        new RuntimeException(
+                        new OrderNotFoundException(
                                 "Order not found with id: " + id
                         )
                 );
@@ -102,7 +103,7 @@ public class OrderServiceImpl implements OrderService {
 
         Order existingOrder = repository.findById(id)
                 .orElseThrow(() ->
-                        new RuntimeException(
+                        new OrderNotFoundException(
                                 "Order not found with id: " + id
                         )
                 );
@@ -117,7 +118,7 @@ public class OrderServiceImpl implements OrderService {
 
         Order existingOrder = repository.findById(id)
                 .orElseThrow(() ->
-                        new RuntimeException(
+                        new OrderNotFoundException(
                                 "Order not found with id: " + id
                         )
                 );
