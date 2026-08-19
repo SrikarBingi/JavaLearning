@@ -20,6 +20,8 @@ import com.flm.dto.OrderResponse;
 import com.flm.model.OrderStatus;
 import com.flm.service.OrderService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
@@ -32,7 +34,7 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<OrderResponse> createOrder(
-            @RequestBody OrderRequest request) {
+    		@Valid @RequestBody OrderRequest request) {
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
